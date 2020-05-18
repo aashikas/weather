@@ -1,5 +1,5 @@
-PHP application to get the weather report for the cities.
+PHP application to get the Live Weather report for the Cities.
 
-Open weather map Api is used to get the Live data for a city and integrated with jQuery.
+Open Weather Map API is used to get the Live data for a city and integrated with jQuery - v3.5.1.
 
 Created by Aashika 
