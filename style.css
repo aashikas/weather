@@ -1,0 +1,17 @@
+html, body, h1, h2, h3, h4, h5, h6 {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  text-align: center;
+}
+body {
+    background-image: url('bg.jpg');
+    color:#ffffff;
+}
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
