@@ -32,6 +32,8 @@ date_default_timezone_set($get['timezone']);
  $string = "http://api.openweathermap.org/data/2.5/weather?q=".$city."&units=metric&appid=ae61a217472f97a10239627b67c157f4";
  $data = json_decode(file_get_contents($string),true);
  $temp = $data['main']['temp'];
+ $tempMin = $data['main']['temp_min'];
+ $tempMax = $data['main']['temp_max'];
  $icon = $data['weather'][0]['icon'];
  $visibility = $data['visibility'];
  $visibilitykm = $visibility / 1000;
@@ -39,6 +41,8 @@ date_default_timezone_set($get['timezone']);
  $logo = "<center><img src='http://openweathermap.org/img/w/".$icon.".png'></center>";
  $desc = "<b><p>".$data['weather'][0]['description']."</p></b>";
  $temperature =  "<b>Temp:".$temp."°C</b><br>";
+ $mintemperature =  "<b>Min Temp:".$tempMin."°C</b><br>";
+ $maxtemperature =  "<b>Max Temp:".$tempMax."°C</b><br>";
  $clouds = "<b>Clouds:".$data['clouds']['all']."%</b><br>";
  $humidity = "<b>Humidity:".$data['main']['humidity']."%</b><br>";
  $windspeed = "<b>Wind Speed:".$data['wind']['speed']."m/s</b><br>";
@@ -56,6 +60,8 @@ date_default_timezone_set($get['timezone']);
 		  </div>
 		  <h1>
 			<?php echo $temperature; ?>
+			<?php echo $maxtemperature; ?>
+			<?php echo $mintemperature; ?>
 			<?php echo $clouds; ?>
 			<?php echo $humidity; ?>
 			<?php echo $$windspeed; ?>
